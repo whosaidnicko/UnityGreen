@@ -2,7 +2,7 @@ workflows:
     ios-workflow:
       name: iOS Workflow
       integrations:
-        app_store_connect: mrgreen # < -- Put API Key Name from Teams > Settings > Integrations > App Store Connect
+        app_store_connect: stanmitchelpp # < -- Put API Key Name from Teams > Settings > Integrations > App Store Connect
       environment:
         ios_signing:
           distribution_type: app_store
