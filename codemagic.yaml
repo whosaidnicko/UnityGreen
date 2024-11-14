@@ -19,15 +19,15 @@ workflows:
       xcode: 16.0
 
     scripts:
+    
+      - name: Install Git LFS
+        script: |
+            git lfs install --skip-smudge
       - name: Set up code signing settings on Xcode project
         script: |
             gem update xcodeproj
             xcode-project use-profiles --project *.xcodeproj
           
-    - name: Install Git LFS
-      script: | 
-        git lfs install --skip-smudge
-
       - name: Increment build number
         script: |
           cd $CM_BUILD_DIR
