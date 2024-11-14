@@ -23,6 +23,10 @@ workflows:
         script: |
             gem update xcodeproj
             xcode-project use-profiles --project *.xcodeproj
+          
+    - name: Install Git LFS
+      script: | 
+        git lfs install --skip-smudge
 
       - name: Increment build number
         script: |
